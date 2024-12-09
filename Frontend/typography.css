@@ -1,0 +1,55 @@
+/* Title styling */
+.main-content h1 {
+    font-size: 3.5em; /* Very big title */
+    font-family: 'Poppins';
+    font-weight: 1000; /* Use a numeric value for boldness */
+    color: #4f4e4e;
+    margin-bottom: 20px;
+}
+
+.main-content h6 {
+    font-size: 1.1em; /* Very big title */
+    font-family: 'Poppins';
+    font-weight: 400; /* Use a numeric value for boldness */
+    color: #4f4e4e;
+}
+
+input, textarea {
+    width: 100%; /* Ensure they take full width of the container */
+    box-sizing: border-box; /* Include padding and borders in the width */
+    padding: 20px;
+    resize: vertical; /* Allow vertical resizing only */
+    font-family: 'Poppins';
+    font-size: 15px;
+}
+
+input {
+    height: 40px; /* Set a specific height for input fields */
+}
+
+textarea {
+    height: 80px; /* Set a specific height for text areas */
+}
+
+.entry h4 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+/* Input field placeholder styling */
+input::placeholder, textarea::placeholder {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+input {
+    width: 100%; /* Ensure they take full width of the container */
+    box-sizing: border-box; /* Include padding and borders in the width */
+    padding: 10px; /* Add padding inside the input */
+    margin-bottom: 15px; /* Add margin below each input field */
+    font-family: 'Poppins';
+    font-size: 15px;
+    border: 1px solid #ccc; /* Optional: add a border */
+    border-radius: 5px; /* Optional: round the corners */
+}

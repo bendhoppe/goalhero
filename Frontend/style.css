@@ -1,0 +1,136 @@
+@import 'buttons.css';
+@import 'typography.css';
+@import 'layout.css';
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Journal entries styling */
+#futureEntries {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Goal entries styling */
+#goalEntries {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+#habitEntries {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.goal-entry {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+    width: 100%; /* Ensure it takes full width of the container */
+    max-width: 600px; /* Optional: add a max width to prevent stretching */
+}
+
+/* Entry box styling */
+.entry {
+    background: white;
+    padding: 45px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+    width: 1000px; /* Set a fixed width */
+}
+
+
+.entry p {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+
+/* Style for the habit checkboxes */
+input[type="checkbox"] {
+    display: none; /* Hide the default checkbox */
+}
+
+div > .entry > .checkbox-container > div {
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+div > .entry > .checkbox-container > div span {
+    font-size: 18px;
+    color: #aaa; /* Default grey for unchecked */
+}
+
+div > .entry > .checkbox-container > div.checked {
+    background: linear-gradient(to right, #388BFF, #5ECFFF); /* Blue gradient background */
+    color: white;
+}
+
+div > .entry > .checkbox-container > div span.checked {
+    color: white;
+}
+
+.week-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding-right: 25px;
+  padding-top: 0px;
+  gap: 10px;
+  font-family: Poppins, sans-serif;
+}
+
+.toggle-button {
+  padding: 10px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e4e4e4;
+  color: ##737373;
+}
+
+.toggle-button:hover {
+  padding: 10px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #c8c6c6;
+  color: #aaa8a8;
+}
+
+.toggle-button:disabled {
+  background-color: #ddd;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.header-flex {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Vertically align items */
+    justify-content: space-between; /* Push items to opposite ends of the container */
+}
+
+
+
+

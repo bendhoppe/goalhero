@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goal Tracking App - Future Journaling</title>
+  <link rel="stylesheet" href="style.css"> <!-- Linking the CSS file -->
+
+  <style>
+    /* Dropdown menu styling */
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 70px; /* Adjust positioning based on your layout */
+        right: 30px;
+        width: 200px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+        z-index: 100;
+    }
+
+    /* Each item in the dropdown */
+    .dropdown-item {
+        padding: 10px 16px;
+        color: #333;
+        text-decoration: none;
+        display: block;
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+
+    /* Hover effect */
+    .dropdown-item:hover {
+        background-color: #f2f2f2;
+    }
+  </style>
+
+</head>
+
+<body>
+    <!-- Topbar for navigation -->
+  <div class="topbar">
+    <h1><a href="future_journaling.html" style="text-decoration: none; color: inherit;">GoalHero</a></h1>
+      <div class="top-bar profile-icon" id="profileButton">
+    <!-- Your website or app logo -->
+    <img src="ProfileIcon.png" alt="App Logo" />
+  </div>
+  </div>
+
+  <!-- Dropdown menu - Version 1 (Login/Sign up) -->
+  <div class="dropdown-menu" id="dropdownMenu1">
+      <div class="dropdown-item" id="loginButton">Log in</div>
+      <div class="dropdown-item" id="signUpButton">Sign up</div>
+  </div>
+
+  <!-- Dropdown menu - Version 2 (Log out) -->
+  <div class="dropdown-menu" id="dropdownMenu2">
+      <div class="dropdown-item" id="logoutButton">Log out</div> <!-- Added unique ID -->
+  </div>
+
+  <div class="container">
+    <!-- Sidebar for navigation -->
+    <div class="sidebar">
+      <ul>
+        <li><a href="future_journaling.html">Future Journaling</a></li>
+        <li><a href="goal_tracking.html">Goals</a></li></a></li>
+        <li><b href="habit_tracking.html">Habits</b></li></a></li>
+      </ul>
+    </div>
+
+    <!-- Main content area -->
+    <div class="main-content">
+            <div class="week-toggle">
+  <button id="back-arrow" class="toggle-button">◀</button>
+  <span id="week-display">Week of Nov 20 - Nov 26</span>
+  <button id="today-button" class="toggle-button">Today</button>
+  <button id="forward-arrow" class="toggle-button" disabled>▶</button>
+</div>
+      <header>
+   <div class="header-flex">
+    <h1>Habits</h1>
+
+</div>
+
+    <h6>
+        Now that you’ve converted your general vision into down-to-earth goals, it’s time to turn those goals
+        into daily habits, and to make a plan for how you will stick to them. The key to achieving major goals
+        is steady, consistent effort through daily habits, and the key to maintaining those habits is an action plan.
+    </h6>
+</header>
+
+
+       <main>
+        <section class="habit-input">
+        <div id="habitEntries"></div>
+        <button class="btn" id="addHabitBtn" title="Click to add a habit">Add a Habit</button>
+      </section>
+      </main>
+    </div>
+  </div>
+  <script src="habit_tracker_script.js"></script> <!-- Linking your JavaScript -->
+
+  <script>
+
+    // Handle dropdown menu toggle
+    let isDropdownOpen = false;
+
+    document.getElementById("profileButton").onclick = function (event) {
+        const dropdownMenu1 = document.getElementById("dropdownMenu1");
+        const dropdownMenu2 = document.getElementById("dropdownMenu2");
+
+        // Toggle between displaying the dropdown menus
+        if (isDropdownOpen) {
+            dropdownMenu1.style.display = "none";
+            dropdownMenu2.style.display = "none";
+        } else {
+            const token = localStorage.getItem("authToken");
+            if (token) {
+                dropdownMenu1.style.display = "none"; // Hide login/signup menu
+                dropdownMenu2.style.display = "block"; // Show logout menu
+            } else {
+                dropdownMenu1.style.display = "block"; // Show login/signup menu
+                dropdownMenu2.style.display = "none"; // Hide logout menu
+            }
+        }
+
+        isDropdownOpen = !isDropdownOpen;
+        event.stopPropagation(); // Prevents triggering the window click listener
+    };
+
+    // Close the dropdown if clicked outside
+    window.onclick = function (event) {
+        const dropdownMenu1 = document.getElementById("dropdownMenu1");
+        const dropdownMenu2 = document.getElementById("dropdownMenu2");
+
+        if (!event.target.closest(".top-bar.profile-icon") && !event.target.closest("#profileButton")) {
+            dropdownMenu1.style.display = "none";
+            dropdownMenu2.style.display = "none";
+            isDropdownOpen = false;
+        }
+    };
+
+    // Add event listener to the Log in button
+    document.getElementById("loginButton").onclick = function () {
+        window.location.href = "login.html"; // Redirect to login.html
+    };
+
+    // Add event listener to the Sign up button
+    document.getElementById("signUpButton").onclick = function () {
+        window.location.href = "register.html"; // Redirect to register.html
+    };
+
+    // Add event listener to the Logout button
+    document.querySelector("#dropdownMenu2 .dropdown-item").addEventListener("click", () => {
+        // Clear the token from localStorage
+        localStorage.removeItem("authToken");
+        // Redirect to the login page
+        window.location.href = "login.html";
+    });
+</script>
+</body>
+</html>

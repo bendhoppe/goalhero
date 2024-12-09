@@ -1,0 +1,185 @@
+/* Full-screen layout */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9; /* Light background */
+    color: #333;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    height: 100vh;
+}
+
+/* Top bar styling */
+.topbar {
+  display: flex; /* Use flexbox layout for the top bar */
+  justify-content: space-between; /* Align items to the left and right */
+  align-items: center; /* Vertically center the items */
+  width: 100%;
+  background: linear-gradient(to right, #388BFF, #5ECFFF); /* Blue gradient background */
+  padding: 15px 30px; /* Adjust padding as needed */
+  color: white; /* Text color */
+  font-size: 1.5em; /* Font size for the title */
+}
+
+/* Profile icon styling */
+.topbar .profile-icon img {
+  width: 60px; /* Adjusted icon size */
+  height: 40px; /* Ensure the icon is circular */
+  object-fit: cover; /* Ensures the image is cropped correctly */
+  cursor: pointer; /* Make the icon clickable */
+  transition: transform 0.2s ease; /* Smooth transition for hover effect */
+}
+
+.topbar .profile-icon img:hover {
+  transform: scale(1.05); /* Slightly enlarge the profile icon on hover */
+}
+
+/* Main container */
+.container {
+    display: flex;
+    padding: 20px;
+    flex-grow: 1; /* Allow container to grow */
+}
+/* Login container */
+#loginContainer {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+}
+#authContainer {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 400px; /* Set a max width for the form */
+    margin-top: 20px;
+    text-align: center;
+}
+
+#authContainer h1 {
+    margin-bottom: 20px; /* Adjust the value as needed for spacing */
+}
+
+/* Main content area */
+.main-content {
+    flex-grow: 1;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f4f9; /* Light background */
+}
+
+
+/* Sidebar styling (left navigation) */
+.sidebar {
+    max-width: 330px; /* Ensure it does not exceed this width */
+    min-width: 330px; /* Ensure it does not exceed this width */
+    border-radius: 20px;
+    background-color: #FFFFFF; /* Light grey background */
+    padding: 20px;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Sidebar navigation */
+.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+    width: 100%;
+}
+
+.sidebar ul li {
+    margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    font-size: 1em;
+    color: #4f4e4e; /* Grey text */
+    font-weight: 570;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between icon and arrow */
+    align-items: center; /* Center items vertically */
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+    position: relative; /* Required for the positioning of the pseudo-element */
+}
+
+.sidebar ul li a::after {
+    content: '→'; /* Right arrow character */
+    margin-left: 10px; /* Space between text and arrow */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for arrow */
+    font-size: 1em; /* Adjust size if needed */
+}
+
+.sidebar ul li a:hover {
+    background: linear-gradient(to right, #388BFF, #5ECFFF); /* Blue background */
+    color: #FFFFFF;
+}
+
+.sidebar ul li a:hover::after {
+    transform: translateX(5px); /* Move the arrow further to the right on hover */
+}
+
+.sidebar ul li b {
+    text-decoration: none;
+    font-size: 1em;
+    background: linear-gradient(to right, #388BFF, #5ECFFF); /* Blue background */
+    color: #FFFFFF; /* Grey text */
+    font-weight: 570;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between icon and arrow */
+    align-items: center; /* Center items vertically */
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+    position: relative; /* Required for the positioning of the pseudo-element */
+}
+
+.sidebar ul li b::after {
+    content: '→'; /* Right arrow character */
+    margin-left: 10px; /* Space between text and arrow */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for arrow */
+    font-size: 1em; /* Adjust size if needed */
+}
+
+.icon {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.arrow {
+    margin-left: auto; /* Pushes the arrow to the right */
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 50px; /* Adjust positioning based on your layout */
+  right: 20px;
+  width: 200px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  z-index: 100;
+}
+
+/* Each item in the dropdown */
+.dropdown-item {
+  padding: 10px 16px;
+  color: #333;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+/* Hover effect */
+.dropdown-item:hover {
+  background-color: #f2f2f2;
+}

@@ -1,0 +1,248 @@
+/* Add Entry button */
+.btn {
+    position: relative; /* Required for the positioning of the pseudo-element */
+    padding: 10px 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right, #388BFF, #5ECFFF); /* Blue gradient background */
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out; /* Transition for background */
+    margin-top: 8px; /* Ensures it stays below entries */
+}
+#addEntryBtn {
+    position: relative; /* Required for the positioning of the pseudo-element */
+    padding: 10px 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right, #388BFF, #5ECFFF); /* Blue gradient background */
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out; /* Transition for background */
+    margin-top: 8px; /* Ensures it stays below entries */
+}
+
+#addEntryBtn::after {
+    content: '→'; /* Right arrow character */
+    margin-left: 10px; /* Space between text and arrow */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for arrow */
+    font-size: 1em; /* Adjust size if needed */
+    display: inline-block; /* Ensure it behaves like an inline element */
+}
+
+#addEntryBtn:hover {
+    background: linear-gradient(to right, #5ECFFF, #388BFF); /* Blue gradient background */
+}
+
+#addEntryBtn:hover::after {
+    transform: translateX(5px); /* Move the arrow further to the right on hover */
+}
+
+/* Add Goal button */
+#addGoalBtn {
+    position: relative; /* Required for the positioning of the pseudo-element */
+    padding: 10px 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right, #388BFF, #5ECFFF); /* Blue gradient background */
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out; /* Transition for background */
+    margin-top: 8px; /* Ensures it stays below entries */
+}
+
+#addGoalBtn::after {
+    content: '→'; /* Right arrow character */
+    margin-left: 10px; /* Space between text and arrow */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for arrow */
+    font-size: 1em; /* Adjust size if needed */
+    display: inline-block; /* Ensure it behaves like an inline element */
+}
+
+#addGoalBtn:hover {
+    background: linear-gradient(to right, #5ECFFF, #388BFF); /* Blue gradient background */
+}
+
+#addGoalBtn:hover::after {
+    transform: translateX(5px); /* Move the arrow further to the right on hover */
+}
+
+/* Add Habit button */
+#addHabitBtn {
+    position: relative; /* Required for the positioning of the pseudo-element */
+    padding: 10px 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right, #388BFF, #5ECFFF); /* Blue gradient background */
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out; /* Transition for background */
+    margin-top: 8px; /* Ensures it stays below entries */
+}
+
+#addHabitBtn::after {
+    content: '→'; /* Right arrow character */
+    margin-left: 10px; /* Space between text and arrow */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for arrow */
+    font-size: 1em; /* Adjust size if needed */
+    display: inline-block; /* Ensure it behaves like an inline element */
+}
+
+#addHabitBtn:hover {
+    background: linear-gradient(to right, #5ECFFF, #388BFF); /* Blue gradient background */
+}
+
+#addHabitBtn:hover::after {
+    transform: translateX(5px); /* Move the arrow further to the right on hover */
+}
+
+/* Button styles */
+.edit-button, .delete-button, .save-button, .cancel-button {
+    padding: 8px 12px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.edit-button {
+    background-color: #2a5298;
+    color: white;
+}
+
+.edit-button:hover {
+    background-color: #3e69b4;
+}
+
+.delete-button {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #ff1a1a;
+}
+
+.save-button {
+    background: linear-gradient(to right, #388BFF, #5ECFFF); /* Blue gradient background */
+    color: white;
+}
+
+.save-button:hover {
+    background-color: #45a049;
+}
+
+#registerBtn, #loginBtn {
+    position: relative;
+    padding: 10px 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right, #388BFF, #5ECFFF);
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out; /* Add transition for transform */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#registerBtn::after, #loginBtn::after {
+    content: '→';
+    margin-left: 10px;
+    transition: transform 0.3s ease-in-out; /* Ensure arrow has a smooth transition */
+    font-size: 1em;
+    display: inline-block;
+}
+
+#registerBtn:hover, #loginBtn:hover {
+    background: linear-gradient(to right, #5ECFFF, #388BFF); /* Switch gradient on hover */
+}
+
+#registerBtn:hover::after, #loginBtn:hover::after {
+    transform: translateX(5px); /* Move arrow right on hover */
+}
+
+#registerLink {
+    display: block; /* Make it block-level for better spacing */
+    margin-top: 10px; /* Space above the link */
+    text-align: center; /* Center the text */
+    font-size: 0.9em; /* Slightly smaller font size */
+    color: #388BFF; /* Color to match your theme */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+#registerLink:hover {
+    color: #5ECFFF; /* Change color on hover */
+}
+
+
+#testBtn {
+    position: relative; /* Required for the positioning of the pseudo-element */
+    padding: 10px 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right, #388BFF, #5ECFFF); /* Blue gradient background */
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out; /* Transition for background */
+    margin-top: 8px; /* Ensures it stays below entries */
+}
+
+/* Label Styling */
+label {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 4px;
+}
+
+/* Subtle expand/collapse arrow */
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #888;
+    font-size: 14px;
+}
+
+/* Hover effect for arrow */
+button:hover {
+    color: #555;
+}
+
+.toggle-button img {
+  width: 16px; /* Adjust to make the image smaller */
+  height: 16px; /* Maintain the aspect ratio by setting both width and height */
+}
+
+.toggle-button {
+  padding: 5px;
+  border: none;
+  background-color: transparent; /* Make the button background transparent */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-button:disabled {
+  opacity: 0.5; /* Dim the button when disabled */
+  cursor: not-allowed;
+}
+
+.week-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: Arial, sans-serif;
+}
+
+

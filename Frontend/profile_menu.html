@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goal Tracking App - Future Journaling</title>
+  <link rel="stylesheet" href="style.css"> <!-- Linking the CSS file -->
+  <style>
+      /* Dropdown menu styling */
+      .dropdown-menu {
+          display: none;
+          position: absolute;
+          top: 50px; /* Adjust positioning based on your layout */
+          right: 20px;
+          width: 200px;
+          background-color: #fff;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          padding: 10px 0;
+          z-index: 100;
+      }
+
+      /* Each item in the dropdown */
+      .dropdown-item {
+          padding: 10px 16px;
+          color: #333;
+          text-decoration: none;
+          display: block;
+          cursor: pointer;
+          transition: background 0.2s;
+      }
+
+      /* Hover effect */
+      .dropdown-item:hover {
+          background-color: #f2f2f2;
+      }
+  </style>
+</head>
+<body>
+  <!-- Topbar for navigation -->
+  <div class="topbar">
+    <h1>GoalHero</h1>
+    <div class="top-bar profile-icon" id="profileButton">
+      <img src="ProfileIcon.png" alt="App Logo" />
+    </div>
+  </div>
+
+  <!-- Dropdown menu - Version 1 (Login/Sign up) -->
+  <div class="dropdown-menu" id="dropdownMenu1">
+      <div class="dropdown-item">Log in</div>
+      <div class="dropdown-item">Sign up</div>
+  </div>
+
+  <!-- Dropdown menu - Version 2 (Log out) -->
+  <div class="dropdown-menu" id="dropdownMenu2">
+      <div class="dropdown-item" id="logoutBtn">Log out</div>
+  </div>
+
+  <div class="container">
+    <!-- Sidebar for navigation -->
+    <div class="sidebar">
+      <ul>
+        <li><a href="future_journaling.html">Future Journaling</a></li>
+        <li><a href="goal_tracking.html">Goals</a></li>
+        <li><a href="habit_tracking.html">Habits</a></li>
+      </ul>
+    </div>
+
+    <!-- Main content area -->
+    <div class="main-content">
+      <header>
+        <h1>Habits</h1>
+        <h6>Now that you’ve converted your general vision into down-to-earth goals, it’s time to turn those goals
+          into daily habits, and to make a plan for how you will stick to them. The key to achieving major goals
+          is steady, consistent effort through daily habits, and the key to maintaining those habits is an action plan.</h6>
+      </header>
+      <main>
+        <section class="habit-input">
+          <div id="habitEntries"></div>
+          <button class="btn" id="addHabitBtn" title="Click to add a habit">Add a Habit</button>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script src="profile_menu_script.js"></script> <!-- Linking your JavaScript -->
+</body>
+</html>
